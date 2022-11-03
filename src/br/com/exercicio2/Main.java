@@ -4,7 +4,7 @@ import javax.swing.JOptionPane;
 
 public class Main {
   public static void main(String[] args) {
-    Funcionario[] funcionarios = new Funcionario[3];
+    Funcionario[] funcionarios = new Funcionario[10];
     Empresa empresa;
 
     for (int i = 0; i < funcionarios.length; i++) {
@@ -20,7 +20,7 @@ public class Main {
     }
   
     for (int i = 0; i < funcionarios.length; i++) {
-      System.out.println(funcionarios[i].mostrarDados());
+      JOptionPane.showMessageDialog(null, funcionarios[i].mostrarDados());
     }
 
     empresa = new Empresa(funcionarios);
