@@ -14,6 +14,7 @@ public class Funcionario extends Pessoa {
     this.salario = salario;
     this.dataCriacao = dataCriacao;
     this.rg = rg;
+    this.status = true;
   }
 
   public String getDepartamento() {
@@ -64,10 +65,14 @@ public class Funcionario extends Pessoa {
     this.status = false;
   }
 
+  public String convertStatus() {
+    return this.status ? "Ativo" : "Inativo";
+  }
+
   public String mostrarDados() {
     return "Funcionario \nNome=" + getNome() + "\nEmail: email" + getEmail() + "\ntelefone" + getTelefone()
-        + "\nDepartamento=" + departamento + "\nSalario=" + salario + "\nData de Criacao=" + dataCriacao
-        + "\nRG=" + rg + "\nStatus=" + status;
+        + "\nDepartamento=" + this.departamento + "\nSalario=" + this.salario + "\nData de Criacao=" + this.dataCriacao
+        + "\nRG=" + this.rg + "\nStatus=" + convertStatus();
   }
 
 }

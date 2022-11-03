@@ -4,14 +4,21 @@ public class Empresa {
   private String nome;
   private String cnpj;
   private int qtdeDeFuncionario;
+  private static int count = 0;
 
   Funcionario[] funcionarios;
 
-  public Empresa(String nome, String cnpj, int qtdeDeFuncionario, Funcionario[] funcionarios) {
+  public Empresa(String nome, String cnpj, int qtdeDeFuncionario) {
     this.nome = nome;
     this.cnpj = cnpj;
-    this.qtdeDeFuncionario = qtdeDeFuncionario;
-    this.funcionarios = funcionarios;
+
+    if (qtdeDeFuncionario <= 100) {
+      this.qtdeDeFuncionario = qtdeDeFuncionario;
+      funcionarios = new Funcionario[qtdeDeFuncionario];
+    } else {
+      this.qtdeDeFuncionario = 100;
+      funcionarios = new Funcionario[100];
+    }
   }
 
   public String getNome() {
@@ -38,7 +45,7 @@ public class Empresa {
     this.qtdeDeFuncionario = qtdeDeFuncionario;
   }
 
-  public String dadosDaEmpresa(){
+  public String dadosDaEmpresa() {
     return "Empresa [nome=" + nome + ", cnpj=" + cnpj + ", qtdeDeFuncionario=" + qtdeDeFuncionario;
   }
 
@@ -46,8 +53,8 @@ public class Empresa {
     return funcionarios;
   }
 
-  public void setFuncionarios(Funcionario[] funcionarios) {
-    this.funcionarios = funcionarios;
+  public void setFuncionarios(Funcionario funcionario) {
+    this.funcionarios[count] = funcionario;
+    count++;
   }
-
 }
