@@ -5,7 +5,7 @@ public class Funcionario extends Pessoa {
   private double salario;
   private String dataCriacao;
   private String rg;
-  private boolean ativo;
+  private boolean status;
 
   public Funcionario(String nome, String email, String telefone, String departamento, double salario,
       String dataCriacao, String rg) {
@@ -48,26 +48,26 @@ public class Funcionario extends Pessoa {
     this.rg = rg;
   }
 
-  public boolean isAtivo() {
-    return ativo;
+  public boolean isStatus() {
+    return status;
   }
 
-  public void setAtivo(boolean ativo) {
-    this.ativo = ativo;
+  public void setStatus(boolean status) {
+    this.status = status;
   }
 
-  public void bonificar(double bonus){
+  public void bonificar(double bonus) {
     this.salario += bonus;
   }
 
   public void demitir() {
-    this.ativo = false;
+    this.status = false;
   }
 
   public String mostrarDados() {
-    return "Funcionario [departamento=" + departamento + ", salario=" + salario + ", dataCriacao=" + dataCriacao
-        + ", rg=" + rg + ", ativo=" + ativo + "]";
+    return "Funcionario \nNome=" + getNome() + "\nEmail: email" + getEmail() + "\ntelefone" + getTelefone()
+        + "\nDepartamento=" + departamento + "\nSalario=" + salario + "\nData de Criacao=" + dataCriacao
+        + "\nRG=" + rg + "\nStatus=" + status;
   }
 
-  
 }
