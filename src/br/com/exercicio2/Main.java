@@ -5,7 +5,7 @@ import javax.swing.JOptionPane;
 public class Main {
   public static void main(String[] args) {
     Empresa empresa;
-    Funcionario[] funcionarios = new Funcionario[1];
+    Funcionario[] funcionarios = new Funcionario[10];
 
     for (int i = 0; i < funcionarios.length; i++) {
       String nome = JOptionPane.showInputDialog(null, "Entre com o nome");
