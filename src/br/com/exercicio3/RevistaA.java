@@ -31,6 +31,6 @@ public class RevistaA {
       artigos.add(new Artigo(tituloArtigo, resumo, autores));
       edicao.adicionaArtigo(artigos.get(i));
     }
-
+    JOptionPane.showMessageDialog(null, revista1.mostrarRevista());
   }
 }
