@@ -34,5 +34,4 @@ public class Artigo {
   public void setAutores(String autores) {
     this.autores = autores;
   }
-
 }

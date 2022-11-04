@@ -7,6 +7,51 @@ public class Edicao {
   private int volume;
   private String dataEdicao;
   private int tiragem;
-  
+
   private ArrayList<Artigo> artigos;
+
+  public Edicao(int numero, int volume, String dataEdicao, int tiragem) {
+    this.numero = numero;
+    this.volume = volume;
+    this.dataEdicao = dataEdicao;
+    this.tiragem = tiragem;
+
+    artigos = new ArrayList<Artigo>();
+  }
+
+  public int getNumero() {
+    return numero;
+  }
+
+  public void setNumero(int numero) {
+    this.numero = numero;
+  }
+
+  public int getVolume() {
+    return volume;
+  }
+
+  public void setVolume(int volume) {
+    this.volume = volume;
+  }
+
+  public String getDataEdicao() {
+    return dataEdicao;
+  }
+
+  public void setDataEdicao(String dataEdicao) {
+    this.dataEdicao = dataEdicao;
+  }
+
+  public int getTiragem() {
+    return tiragem;
+  }
+
+  public void setTiragem(int tiragem) {
+    this.tiragem = tiragem;
+  }
+
+  public void adicionaArtigo(Artigo artigo) {
+    this.artigos.add(artigo);
+  }
 }
